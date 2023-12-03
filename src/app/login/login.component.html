@@ -1,13 +1,16 @@
-<div>
+<div class="truck">
+  <img src="../../assets/[removal.ai]_bfb3a7d7-3134-4412-af4b-52b558fce90a-right-view_Q4CY6L.png" class="moving-image" [@moveImage]="animationState" >
     <form class="clr-form"  (ngSubmit)="login()" >
+      <h1>login</h1>
         <div class="clr-form-control">
           <label  class="clr-control-label">usuario</label>
           <div class="clr-control-container " >
-            <div class="clr-input-wrapper " appClickAway>
+            <div class="clr-input-wrapper "  appClickAway >
               <input type="text" id="user" name="user" placeholder="Escriba aqui" class="clr-input" [(ngModel)]="user"/>
               <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+              <clr-control-error >El campo es requerido!</clr-control-error>
+              <clr-control-helper>Escriba su usuario</clr-control-helper>
             </div>
-            <span class="clr-subtext">Escriba su usuario</span>
           </div>
         </div>
         <div class="clr-form-control">
@@ -16,13 +19,15 @@
               <div class="clr-input-wrapper " appClickAway>
                 <input type="password" id="password" name="password" placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="password"/>
                 <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                <clr-control-error >El campo es requerido!</clr-control-error>
+                <clr-control-helper>Escriba su contraseña</clr-control-helper>
               </div>
-              <span class="clr-subtext">Escriba su contraseña</span>
             </div>
+            <br>
             <div class="button">
-                <button class="btn btn-outline" type="submit">Entrar</button>
+                <button class="btn btn-outline" type="submit" >Entrar</button>
                 <span class="clr-subtext" id="error"></span>
             </div>
         </div>
       </form>
-  </div>
+  </div> 

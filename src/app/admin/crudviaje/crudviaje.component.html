@@ -1,0 +1,92 @@
+<h1>Agregar viaje</h1>
+<div class="contenent">
+  <h2 class="title">Detalles del viaje</h2>
+        <form class="clr-form"  (ngSubmit)="agregar()" >
+            <div class="cont">
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Lugar de salida</label>
+                <div class="clr-control-container " >
+                  <div class="clr-input-wrapper "  appClickAway >
+                    <input type="text"  placeholder="Escriba aqui" class="clr-input" [(ngModel)]="lSalida"/>
+                    <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                    <clr-control-error >El campo es requerido!</clr-control-error>
+                    <clr-control-helper>Escriba el lugar de salida</clr-control-helper>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Lugar de llegada</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="text"   placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="lLlegada"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba el lugar de llegada</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <div class="clr-form-control">
+                  <label  class="clr-control-label">Diesel asignado</label>
+                    <div class="clr-control-container " >
+                      <div class="clr-input-wrapper " appClickAway>
+                        <input type="number"   placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="diesel"/>
+                        <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                        <clr-control-error >El campo es requerido!</clr-control-error>
+                        <clr-control-helper>Escriba la cantidad de diesel que necesitara para el viaje</clr-control-helper>
+                      </div>
+                    </div>
+                </div>
+                <div class="clr-form-control">
+                <label  class="clr-control-label">Fecha de salida</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="date"   placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="dSalida"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba la fecha de salida</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Fecha de llegada</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="date"   placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="dLlegada"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba la fecha de llegada</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Carga del vehiculo</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="text"   placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="carga"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Describa brevemente la carga del vehiculo</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Costo asignado</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="text"  placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="costo"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba el costo total asignado para el viaje</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <br>
+              <div class="button">
+                  <button class="btn btn-outline" type="submit" >Entrar</button>
+                  <span class="clr-subtext" id="error"></span>
+              </div>
+            </div>
+            </form>
+    
+    
+</div>

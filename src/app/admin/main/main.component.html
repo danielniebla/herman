@@ -1,0 +1,256 @@
+<div class="contenent">
+  <nav>
+    <div class="ag">
+      <br />
+      <button class="btn btn-outline" (click)="agc()">Agregar camion</button>
+    </div>
+    <div class="button">
+      <br />
+      <button class="btn btn-outline" (click)="agu()">
+        Manejo de usuarios
+      </button>
+    </div>
+  </nav>
+  <div class="trucks">
+    <div class="tipo head">Tipo</div>
+    <div class="modelo head">Modelo</div>
+    <div class="placa head">Placa</div>
+    <div class="cargam head">Carga maxima</div>
+    <div class="entrada head">Año de entrada</div>
+    <div class="name head">Conductor</div>
+    <ng-container *ngFor="let truck of trucks">
+      <div class="tipo bod" (click)="abrir(truck.id)">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input noTipe"
+          [(ngModel)]="truck.tipo"
+          [attr.data-index]="truck.id"
+          (click)="abrir(truck.id)"
+        />
+        <img
+          src="../../../assets/editar.png"
+          alt=""
+          srcset=""
+          [attr.data-index]="truck.id"
+          (click)="editartruck(truck.id)"
+        />
+        <img
+          src="../../../assets/borrar (1).png"
+          alt=""
+          srcset=""
+          [attr.data-index]="truck.id"
+          (click)="verificarBorradoTruck(truck.id)"
+        />
+        <img
+          src="../../../assets/salvado.png"
+          class="oculta"
+          alt=""
+          srcset=""
+          (click)="guardarCambiosTruck(truck)"
+          [attr.data-index]="truck.id"
+        />
+      </div>
+      <div class="modelo bod" (click)="abrir(truck.id)">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input noTipe"
+          [(ngModel)]="truck.modelo"
+          [attr.data-index]="truck.id"
+        />
+      </div>
+      <div class="placa bod" (click)="abrir(truck.id)">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input noTipe"
+          [(ngModel)]="truck.placa"
+          [attr.data-index]="truck.id"
+          [attr.data-index]="truck.id"
+        />
+      </div>
+      <div class="cargam bod" (click)="abrir(truck.id)">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input noTipe"
+          [(ngModel)]="truck.max_carga"
+          [attr.data-index]="truck.id"
+        />
+      </div>
+      <div class="entrada bod" (click)="abrir(truck.id)">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input noTipe"
+          [(ngModel)]="truck.entry_year"
+          [attr.data-index]="truck.id"
+        />
+      </div>
+      <div class="name bod" (click)="abrir(truck.id)">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input noTipe"
+          [(ngModel)]="truck.iduser"
+          [attr.data-index]="truck.id"
+        />
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-container *ngIf="e; then ifBlock; else elseBlock"></ng-container>
+
+  <ng-template #ifBlock>
+    <div class="data">
+      <div class="col">
+        <h3 class="title">chofer</h3>
+        <h4>{{ chofer }}</h4>
+      </div>
+      <div class="col">
+        <h3 class="title">camion</h3>
+        <h4>{{ camion }}</h4>
+      </div>
+    </div>
+    <div class="tabla">
+      <div class="head salida">Salida</div>
+      <div class="head destino">Destino</div>
+      <div class="head diesel">Diesel</div>
+      <div class="head fechas">Fecha de salida</div>
+      <div class="head fechal">Fecha de llegada</div>
+      <div class="head carga">Carga</div>
+      <div class="head total">Total $</div>
+      <div class="head acciones">Acciones</div>
+
+      <ng-container class="fila" *ngFor="let item of datos">
+        <div class="bod salida">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.salida"
+            [attr.data-index]="item.id"
+          />
+        </div>
+        <div class="bod destino">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.destino"
+            [attr.data-index]="item.id"
+          />
+        </div>
+        <div class="bod diesel">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.diesel"
+            [attr.data-index]="item.id"
+          />
+        </div>
+        <div class="bod fechas">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.fechas"
+            [attr.data-index]="item.id"
+          />
+        </div>
+        <div class="bod fechal">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.fechal"
+            [attr.data-index]="item.id"
+          />
+        </div>
+        <div class="bod carga">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.carga"
+            [attr.data-index]="item.id"
+          />
+        </div>
+        <div class="bod total">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.salida"
+            [attr.data-index]="item.total"
+          />
+        </div>
+        <div class="bod acciones">
+          <input
+            type="text"
+            placeholder="Escriba aqui"
+            class="clr-input noTipe"
+            [(ngModel)]="item.acciones"
+            [attr.data-index]="item.id"
+          />
+        </div>
+      </ng-container>
+    </div>
+    <div class="table-button">
+      <button class="btn btn-outline" (click)="agv()">Agregar viaje</button>
+      <span class="clr-subtext" id="error"></span>
+    </div>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <div>
+      <p>No ha ingresado una coincidencia</p>
+    </div>
+  </ng-template>
+</div>
+
+<div class="modal static bump-down" *ngIf="alert">
+  <div class="modal-dialog" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="alert alert-danger" role="alert">
+        <div class="alert-items">
+          <div class="alert-item static">
+            <div class="alert-icon-wrapper">
+              <cds-icon
+                class="alert-icon"
+                shape="exclamation-circle"
+              ></cds-icon>
+            </div>
+            <span class="alert-text">
+              Alerta la accion seleccionada se borrara permanentemente.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-header">
+        <h3 class="modal-title">Esta seguro de borrar la accion?</h3>
+      </div>
+      <div class="modal-body">
+        <p>La accion se borrara en {{ contador }}</p>
+      </div>
+      <div class="modal-footer">
+        <button
+          class="btn btn-outline"
+          type="button"
+          (click)="cancelarBorrado()"
+        >
+          Cancelar
+        </button>
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="aceptarBorrado()"
+        >
+          borrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

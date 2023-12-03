@@ -1,0 +1,79 @@
+.clr-input-wrapper clr-control-error{
+    display: none;
+}
+clr-control-error.clr-error{
+    display: block;
+}
+clr-control-helper.clr-error{
+    display: none;
+}
+textarea{
+    margin: 0 auto;
+    width: 12rem;
+    height: 5rem;
+}
+.contenent{
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 3fr; 
+        gap: .6rem;
+        padding: .5rem;
+    }
+}
+.fallas{
+    
+    background-color: var(--cds-alias-utility-dark-blue-tint);
+    box-shadow: .2rem .4rem .2rem 0rem var(--cds-alias-utility-light-blue) ;  
+    -webkit-box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-utility-light-blue);
+    -moz-box-shadow: .2rem .2rem .7rem 0rem var(--cds-alias-utility-light-blue) ;
+    width: 100%;
+    border-radius: 1rem;
+    @media screen and (min-width: 768px) {
+        grid-column: 1/2;
+    }
+}
+.mantenimiento{
+    background-color: var(--cds-alias-utility-dark-blue-tint);
+    box-shadow: .2rem .4rem .2rem 0rem var(--cds-alias-utility-light-blue-shade) ;  
+    -webkit-box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-utility-light-blue-shade);
+    -moz-box-shadow: .2rem .2rem .7rem 0rem var(--cds-alias-utility-light-blue-shade) ;
+    width: 100%;
+    border-radius: 1rem;
+    @media screen and (min-width:768px) {
+        grid-column: 2/3;
+    }
+}
+.tittle{
+    grid-column: 1/3;
+    border-radius: 1rem ;
+}
+h1{
+    background-color: var(--cds-alias-status-neutral);
+    border-radius: 1rem;
+    color: white;
+    width: 96%;
+    margin: 2%;
+}
+h2{
+    background-color: var(--cds-alias-utility-light-blue) ;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-top: 0;
+    padding: .5rem;
+}
+.clr-form-control, .button{
+    padding: .5rem;
+}
+.clr-form-control{
+    box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-utility-light-blue-shade) ;  
+    -webkit-box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-utility-light-blue-shade);
+    -moz-box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-utility-light-blue-shade) ;
+    background-color: var(--cds-alias-utility-dark-blue-tint);
+    border-radius: .6rem;
+    padding: .6rem .6rem 1.6rem .6rem;
+    margin: .8rem;
+}
+.table{
+    width: 99%;
+    margin: .5%;
+}

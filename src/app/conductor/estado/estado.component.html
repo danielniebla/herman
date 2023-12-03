@@ -1,0 +1,84 @@
+<h1>Estado</h1>
+<div class="contenent">
+  <h2 class="tittle">Seguimiento de mantenimiento</h2>
+  <div class="fallas">
+    <h2>Falla</h2>
+    <form class="clr-form" (ngSubmit)="fallas()">
+      <div class="clr-form-control">
+        <label for="basic" class="clr-control-label">Concepto</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper" appClickAway>
+            <input
+              type="text"
+              id="concept"
+              placeholder="Explicacion del concepto"
+              class="clr-input"
+              [(ngModel)]="concepto"
+            />
+            <cds-icon
+              class="clr-validate-icon"
+              shape="exclamation-circle"
+            ></cds-icon
+            ><br />
+            <clr-control-error>El campo es requerido!</clr-control-error>
+            <clr-control-helper
+              >Explique de manera breve la razon de la falla</clr-control-helper
+            >
+          </div>
+        </div>
+        <br />
+      </div>
+      <div class="clr-form-control">
+        <label for="basic" class="clr-control-label"
+          >Explicacion de la falla</label
+        >
+        <clr-textarea-container>
+          <textarea
+            clrTextarea
+            [(ngModel)]="falla"
+            placeholder="Explicacion"
+            name="description"
+            required
+          ></textarea>
+          <clr-control-helper
+            >Explique con detalle la falla del vehiculo.</clr-control-helper
+          >
+          <clr-control-error *clrIfError="'required'"
+            >El campo es requerido!</clr-control-error
+          ><br />
+        </clr-textarea-container>
+      </div>
+      <div class="button">
+        <button class="btn btn-outline" type="submit" name="truck">
+          Enviar
+        </button>
+        <span class="clr-subtext" id="error"></span>
+      </div>
+    </form>
+  </div>
+  <div class="mantenimiento">
+    <h2>Seguimiento</h2>
+    <table class="table-compact table">
+      <thead>
+        <tr>
+          <th class="left">Concepto</th>
+          <th class="left">Explicacion</th>
+          <th class="left">Fecha</th>
+          <th class="left">Mantenimiento</th>
+          <th class="left">Costo</th>
+          <th class="left">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="left">1</td>
+          <td class="left">1</td>
+          <td class="left">1</td>
+          <td class="left">I</td>
+          <td class="left">1</td>
+          <td class="left">1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,172 @@
+clr-control-error{
+    display: none;
+}
+clr-control-error.clr-error{
+    display: block;
+}
+clr-control-helper.clr-error{
+    display: none;
+  }
+.contenent{
+    @media screen and (min-width: 768px) {
+        padding: 1rem;
+    }
+}
+.data{
+    display: flex;
+    @media screen and (min-width: 768px) {
+        width: 94%;
+        margin: 3%;
+      }
+    align-self: center;
+    @media screen and (max-width: 768px) {
+        width: 98%;
+      }
+    
+}
+.col{
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+        box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-status-neutral) ;  
+        -webkit-box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-status-neutral);
+        -moz-box-shadow: .2rem .2rem .5rem 0rem var(--cds-alias-status-neutral) ;
+        border-radius: 1rem ;
+        margin: 0 .5rem;
+    }
+}
+.title{
+    @media screen and (min-width: 768px) {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        padding: .5rem;
+      }
+    background-color: var(--cds-alias-status-neutral);
+    padding: 0;
+    margin: 0;
+    color: var(--cds-alias-status-neutral-tint);
+    @media screen and (max-width: 768px) {
+        font-size: small;
+      }
+}
+.title::first-letter {
+    text-transform: uppercase;
+}
+h4{
+    @media screen and (min-width: 768px) {
+        padding: .5rem;
+      }
+    padding: 0;
+    margin: 0;
+    @media screen and (max-width: 768px) {
+        font-size: small;
+      }
+}
+.table{
+    border-radius: .6rem;
+}
+h1{
+    background-color: var(--cds-alias-status-neutral);
+    border-radius: 1rem;
+    color: white;
+    width: 96%;
+    margin: 2%;
+}
+.table-button{
+    display: flex;
+    flex-direction: row-reverse;
+}
+nav{
+    display: flex;
+}
+.button{
+    width: fit-content;
+}
+#error{
+    display: none;
+    color: var(--cds-alias-status-danger)
+}
+.ag{
+    
+    width: fit-content;
+}
+img{
+    width: .8rem;
+    height: .8rem;
+    margin: auto .3rem;
+    padding: 0;
+}
+.oculta{
+    visibility: hidden ;
+    pointer-events: none;
+}
+.head{
+    background-color: var(--cds-alias-utility-light-blue);
+    color: black;
+}
+.noTipe{
+    pointer-events: none;
+}
+.Tipe{
+    pointer-events: all;
+    visibility: visible;
+}
+.bod{
+    background-color: var(--cds-alias-utility-dark-blue-tint);
+}
+.trucks{
+    display: grid;
+    grid-template-columns: repeat(1fr,6);
+}
+.tipo{
+    display: flex;
+    grid-column: 1 / 2;
+}
+.modelo{
+    grid-column: 2 / 3;
+}
+.placa{
+    grid-column: 3 / 4;
+}
+.cargam{
+    grid-column: 4 / 5;
+}
+.entrada{
+    grid-column: 5 / 6;
+}
+.name{
+    grid-column: 6 / 7;
+}
+.tabla{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1fr,8);
+}
+.diesel {
+    grid-column: 3 / 4;
+  }
+  
+  .fechas {
+    grid-column: 4 / 5;
+  }
+  
+  .fechal {
+    grid-column: 5 / 6;
+  }
+  
+  .carga {
+    grid-column: 6 / 7;
+  }
+  
+  .total {
+    grid-column: 7 / 8;
+  }
+  
+  .acciones {
+    grid-column: 8 / 9;
+  }
+input, .clr-input{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}

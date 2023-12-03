@@ -1,0 +1,86 @@
+.contenent{
+    background-color:var(--cds-alias-utility-gray-tint) ;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: .6rem;
+    }
+}
+.clr-form-control{
+    box-shadow: .2rem .2rem .5rem 0rem var(--cds-global-color-aqua-200) ;  
+    -webkit-box-shadow: .2rem .2rem .5rem 0rem var(--cds-global-color-aqua-200);
+    -moz-box-shadow: .2rem .2rem .5rem 0rem var(--cds-global-color-aqua-200) ;
+    background-color: var(--cds-global-color-aqua-100);
+    border-radius: .6rem;
+    padding: .6rem;
+    margin: .8rem;
+}
+
+.truck{
+    grid-column: 1/2;
+    background-color: var(--cds-global-color-aqua-50);
+    box-shadow: .2rem .4rem .2rem 0rem var(--cds-global-color-aqua-200) ;  
+    -webkit-box-shadow: .2rem .2rem .5rem 0rem var(--cds-global-color-aqua-200);
+    -moz-box-shadow: .2rem .2rem .7rem 0rem var(--cds-global-color-aqua-200) ;
+    width: 100%;
+    border-radius: 1rem;
+
+}
+.truck h2{
+    background-color:var(--cds-global-color-aqua-200)  ;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-top: 0;
+}
+.drivers{
+    grid-column: 2/3;
+    background-color: var(--cds-global-color-blue-50);
+    box-shadow: .2rem .2rem .5rem 0rem var(--cds-global-color-blue-200) ;  
+    -webkit-box-shadow: .2rem .2rem .5rem 0rem var(--cds-global-color-blue-200);
+    -moz-box-shadow: .2rem .2rem .5rem 0rem var(--cds-global-color-blue-200) ;
+    width: 100%;
+    border-radius: 1rem;
+}
+.drivers h2{
+    background-color: var(--cds-global-color-blue-200) ;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-top: 0;
+}
+.tittle, h1{
+    grid-column: 1/3;
+}
+h2{
+    text-align: center;
+}
+clr-control-error{
+    display: none;
+}
+clr-control-error.clr-error{
+    display: block;
+}
+clr-control-helper.clr-error{
+    display: none;
+  }
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.btn{
+    align-self: center;
+}
+#error{
+    color: var(--cds-alias-status-danger);
+}
+h1{
+    background-color: var(--cds-alias-status-neutral);
+    border-radius: 1rem;
+    color: white;
+    width: 96%;
+    margin: 2%;
+}

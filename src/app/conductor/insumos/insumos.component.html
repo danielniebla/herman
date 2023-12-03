@@ -1,0 +1,134 @@
+<h1>insumos</h1>
+<div class="contenent">
+  <h2 class="tittle">ingresos</h2>
+  <div class="truck">
+    <h2>Camion</h2>
+    <form class="clr-form" (ngSubmit)="truck()">
+      <div class="clr-form-control">
+        <label for="basic" class="clr-control-label">concepto</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper" appClickAway>
+            <input
+              type="text"
+              id="concept"
+              placeholder="Explicacion del concepto"
+              class="clr-input"
+              [(ngModel)]="conceptt"
+            />
+            <cds-icon
+              class="clr-validate-icon"
+              shape="exclamation-circle"
+            ></cds-icon
+            ><br />
+            <clr-control-error>El campo es requerido!</clr-control-error>
+            <clr-control-helper
+              >Explique de manera breve la razon de la
+              factura</clr-control-helper
+            >
+          </div>
+        </div>
+        <br />
+      </div>
+      <div class="clr-form-control">
+        <label for="basic" class="clr-control-label">Folio de la factura</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper" appClickAway>
+            <input
+              type="text"
+              id="id"
+              placeholder="Folio"
+              class="clr-input"
+              [(ngModel)]="foliot"
+            />
+            <cds-icon
+              class="clr-validate-icon"
+              shape="exclamation-circle"
+            ></cds-icon
+            ><br />
+            <clr-control-error>El campo es requerido!</clr-control-error>
+            <clr-control-helper
+              >El folio de la factura es el identificador de la
+              misma.</clr-control-helper
+            >
+          </div>
+        </div>
+        <br />
+      </div>
+      <div></div>
+      <div class="button">
+        <button class="btn btn-outline" type="submit" name="truck">
+          registrar
+        </button>
+        <span class="clr-subtext" id="error"></span>
+      </div>
+    </form>
+  </div>
+  <div class="drivers">
+    <h2>Conductor</h2>
+    <form class="clr-form" (ngSubmit)="driver()">
+      <div class="clr-form-control">
+        <label for="basic" class="clr-control-label">concepto</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper" appClickAway>
+            <input
+              type="text"
+              id="concept"
+              placeholder="Explicacion del concepto"
+              class="clr-input"
+              [(ngModel)]="conceptd"
+            />
+            <cds-icon
+              class="clr-validate-icon"
+              shape="exclamation-circle"
+            ></cds-icon
+            ><br />
+            <clr-control-error>El campo es requerido!</clr-control-error>
+            <clr-control-helper
+              >Explique de manera breve la razon de la
+              factura</clr-control-helper
+            >
+          </div>
+        </div>
+        <br />
+      </div>
+      <div class="clr-form-control">
+        <label for="basic" class="clr-control-label">Folio de la factura</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper" appClickAway>
+            <input
+              type="text"
+              id="id"
+              placeholder="Folio"
+              class="clr-input"
+              [(ngModel)]="foliod"
+            />
+            <cds-icon
+              class="clr-validate-icon"
+              shape="exclamation-circle"
+            ></cds-icon
+            ><br />
+            <clr-control-error>El campo es requerido!</clr-control-error>
+            <clr-control-helper
+              >El folio de la factura es el identificador de la
+              misma.</clr-control-helper
+            >
+          </div>
+        </div>
+        <br />
+      </div>
+      <div class="button">
+        <button class="btn btn-outline" type="submit" name="driver">
+          registrar
+        </button>
+        <span class="clr-subtext" id="error"></span>
+      </div>
+    </form>
+  </div>
+  <h2 class="tittle">historial</h2>
+  <div class="truck">
+    <h2>Camion</h2>
+  </div>
+  <div class="drivers">
+    <h2>Conductor</h2>
+  </div>
+</div>

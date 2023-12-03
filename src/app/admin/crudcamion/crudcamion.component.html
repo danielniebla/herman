@@ -1,0 +1,81 @@
+<h1>Agregar camion</h1>
+<div class="contenent">
+  <h2 class="title">datos del camion</h2>
+        <form class="clr-form"  (ngSubmit)="agregar()" >
+            <div class="cont">
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Tipo de vehiculo</label>
+                <div class="clr-control-container " >
+                  <div class="clr-input-wrapper "  appClickAway >
+                    <input type="text"  placeholder="Escriba aqui" class="clr-input" [(ngModel)]="type"/>
+                    <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                    <clr-control-error >El campo es requerido!</clr-control-error>
+                    <clr-control-helper>Escriba el tipo de vehiculo</clr-control-helper>
+                  </div>
+                </div>
+              </div>
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Fecha de ingreso</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="date"  placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="ingreso"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba la fecha en que ingreso a la compañia</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <div class="clr-form-control">
+                  <label  class="clr-control-label">Marca y modelo</label>
+                    <div class="clr-control-container " >
+                      <div class="clr-input-wrapper " appClickAway>
+                        <input type="text"  placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="mod"/>
+                        <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                        <clr-control-error >El campo es requerido!</clr-control-error>
+                        <clr-control-helper>Escriba el modelo del vehiculo</clr-control-helper>
+                      </div>
+                    </div>
+                </div>
+                <div class="clr-form-control">
+                <label  class="clr-control-label">placa</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="text"  placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="plate"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba la placa del vehiculo</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Carga maxima</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="number"  placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="maxload"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba la carga maxima del vehiculo(toneladas)</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <div class="clr-form-control">
+                <label  class="clr-control-label">Conductor</label>
+                  <div class="clr-control-container " >
+                    <div class="clr-input-wrapper " appClickAway>
+                      <input type="text"  placeholder="Escriba aqui" class="clr-input"  [(ngModel)]="driver"/>
+                      <cds-icon class="clr-validate-icon" shape="exclamation-circle"></cds-icon>
+                      <clr-control-error >El campo es requerido!</clr-control-error>
+                      <clr-control-helper>Escriba el nombre del conductor</clr-control-helper>
+                    </div>
+                  </div>
+              </div>
+              <br>
+              <div class="button">
+                  <button class="btn btn-outline" type="submit" >Entrar</button>
+                  <span class="clr-subtext" id="error"></span>
+              </div>
+            </div>
+            </form>
+    
+    
+</div>

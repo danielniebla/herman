@@ -1,0 +1,199 @@
+<h1>Manejo de usuarios</h1>
+<div class="contenent">
+  <h2 class="title">usuarios</h2>
+  <div class="conte">
+    <div class="name head">Nombre de usuario</div>
+    <div class="password head">Contraseña</div>
+    <ng-container *ngFor="let usuario of usuarios"
+      ><!-- ngfor usuarios type admin-->
+      <div class="name bod">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input"
+          [(ngModel)]="usuario.usuario"
+        />
+        <img src="../../../assets/editar.png" alt="" srcset="" />
+        <img src="../../../assets/borrar (1).png" alt="" srcset="" />
+        <img src="../../../assets/salvado.png" alt="" srcset="" />
+      </div>
+      <div class="password bod">
+        <input
+          type="password"
+          placeholder="Escriba aqui"
+          class="clr-input"
+          [(ngModel)]="usuario.contrasena"
+        />
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="contenent">
+  <h2 class="title">choferes</h2>
+  <div class="conten">
+    <div class="name head">Nombre de usuario</div>
+    <div class="password head">Contraseña</div>
+    <div class="apellido head">Apellido</div>
+    <div class="licencia head">Licencia</div>
+    <ng-container *ngFor="let chofer of choferes"
+      ><!-- ngfor usuarios type admin-->
+      <div class="name bod">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input"
+          [(ngModel)]="chofer.usuario"
+        />
+        <img src="../../../assets/editar.png" alt="" srcset="" />
+        <img src="../../../assets/borrar (1).png" alt="" srcset="" />
+        <img src="../../../assets/salvado.png" alt="" srcset="" />
+      </div>
+      <div class="password bod">
+        <input
+          type="password"
+          placeholder="Escriba aqui"
+          class="clr-input"
+          [(ngModel)]="chofer.contrasena"
+        />
+      </div>
+      <div class="apellido bod">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input"
+          [(ngModel)]="chofer.apellido"
+        />
+      </div>
+      <div class="licencia bod">
+        <input
+          type="text"
+          placeholder="Escriba aqui"
+          class="clr-input"
+          [(ngModel)]="chofer.licencia"
+        />
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="contenent">
+  <h2 class="title">agregar nuevo usuario</h2>
+  <form class="clr-form" (ngSubmit)="agregar()">
+    <div class="cont">
+      <div class="clr-form-control">
+        <!--    nombre de usuario  -->
+        <label class="clr-control-label">Nombre de usuario</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper" appClickAway>
+            <input
+              type="text"
+              placeholder="Escriba aqui"
+              class="clr-input"
+              name="usuario"
+              [(ngModel)]="usuario"
+            />
+            <cds-icon
+              class="clr-validate-icon"
+              shape="exclamation-circle"
+            ></cds-icon>
+            <clr-control-error>El campo es requerido!</clr-control-error>
+            <clr-control-helper>Escriba el Usuario</clr-control-helper>
+          </div>
+        </div>
+      </div>
+      <div class="clr-form-control">
+        <!--    contrasena  -->
+        <label class="clr-control-label">Contraseña</label>
+        <div class="clr-control-container">
+          <div class="clr-input-wrapper" appClickAway>
+            <input
+              type="password"
+              name="password"
+              placeholder="Escriba aqui"
+              class="clr-input"
+              [(ngModel)]="contrasena"
+            />
+            <cds-icon
+              class="clr-validate-icon"
+              shape="exclamation-circle"
+            ></cds-icon>
+            <clr-control-error>El campo es requerido!</clr-control-error>
+            <clr-control-helper
+              >Escriba la contraseña del usuario
+            </clr-control-helper>
+          </div>
+        </div>
+      </div>
+      <clr-toggle-container role="group" class="clr-form-control">
+        <!--    tipo de usuario -->
+        <label></label>
+
+        <clr-toggle-wrapper>
+          <input
+            name="chofer"
+            type="checkbox"
+            clrToggle
+            value="option1"
+            name="options"
+            class="chofer"
+            [(ngModel)]="chofer"
+          />
+          <label>Chofer</label>
+        </clr-toggle-wrapper>
+        <clr-control-helper>El usuario es de tipo chofer</clr-control-helper>
+      </clr-toggle-container>
+      <ng-container *ngIf="chofer">
+        <div class="clr-form-control">
+          <!--    apellido  -->
+          <label class="clr-control-label">apellido</label>
+          <div class="clr-control-container">
+            <div class="clr-input-wrapper" appClickAway>
+              <input
+                name="apellido"
+                type="text"
+                placeholder="Escriba aqui"
+                class="clr-input"
+                [(ngModel)]="apellido"
+              />
+              <cds-icon
+                class="clr-validate-icon"
+                shape="exclamation-circle"
+              ></cds-icon>
+              <clr-control-error>El campo es requerido!</clr-control-error>
+              <clr-control-helper
+                >Escriba el apellido del chofer
+              </clr-control-helper>
+            </div>
+          </div>
+        </div>
+        <div class="clr-form-control">
+          <!--    licencia  -->
+          <label class="clr-control-label">Licencia</label>
+          <div class="clr-control-container">
+            <div class="clr-input-wrapper" appClickAway>
+              <input
+                name="licencia"
+                type="text"
+                placeholder="Escriba aqui"
+                class="clr-input"
+                [(ngModel)]="licencia"
+              />
+              <cds-icon
+                class="clr-validate-icon"
+                shape="exclamation-circle"
+              ></cds-icon>
+              <clr-control-error>El campo es requerido!</clr-control-error>
+              <clr-control-helper
+                >Escriba el numero de licencia del chofer
+              </clr-control-helper>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <br />
+      <div class="button">
+        <button class="btn btn-outline" type="submit">Registrar</button>
+        <span class="clr-subtext" id="error"></span>
+      </div>
+    </div>
+  </form>
+</div>
